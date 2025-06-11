@@ -50,6 +50,9 @@ def main():
         for e in p.event.get():
             if e.type == p.QUIT:
                 running=False
+            elif e.type == p.MOUSEBUTTONDOWN():
+                col= location(0) //SQ_SIZE
+                row= location(1)//SQ_SIZE
         drawGameState(screen, gs)
         clock.tick(MAX_FPS)
         p.display.flip()
