@@ -46,6 +46,8 @@ def main():
     print(gs.board)
     loadImages()
     running = True
+    sqSelected=()
+    playerMoves=[]
     while running:
         for e in p.event.get():
             if e.type == p.QUIT:
@@ -53,6 +55,14 @@ def main():
             elif e.type == p.MOUSEBUTTONDOWN():
                 col= location(0) //SQ_SIZE
                 row= location(1)//SQ_SIZE
+                sqSelected=(row,col)
+                if sqSelected == (row,col):
+                    sqSelected= ()
+                    playerMoves=[]
+                else:
+                    sqSelected=(row,col)
+                    playerMoves.append(sqSelected)
+                if
         drawGameState(screen, gs)
         clock.tick(MAX_FPS)
         p.display.flip()
