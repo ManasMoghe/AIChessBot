@@ -12,3 +12,8 @@ class GameState():
         ]
         self.whiteToMove = True
         self.moveLog = []
+
+
+
+        if __name__ == "__main__":
+    main()
